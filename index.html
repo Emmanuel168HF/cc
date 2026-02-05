@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Celeste Camila ✨</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>🎉 Feliz Cumpleaños Celeste Camila 🎂</h1>
+        <h2>Hoy el universo celebra tu existencia ✨</h2>
+
+        <p>
+            Celeste Camila, hoy el calendario se detuvo un segundo
+            solo para reconocer que este día es distinto.
+            No es una fecha cualquiera,
+            es el aniversario de cuando el universo decidió
+            añadir más luz al mundo.<br><br>
+
+            Desde que llegaste, los días tienen más color,
+            las risas suenan más fuerte
+            y hasta los momentos simples parecen tener magia escondida.
+            Que tu vida siga siendo un viaje lleno de canciones que te hagan bailar,
+            personas que te abracen el alma,
+            y sueños que no solo se imaginen…
+            sino que se cumplan sin límites.<br><br>
+
+            Que nunca te falte esperanza,
+            ni motivos para sonreír,
+            ni esa chispa única que hace que seas tú.
+        </p>
+
+        <!-- 🎵 Canciones -->
+        <div class="music-player">
+            <h3>🎵 Tus canciones del día</h3>
+
+            <div class="song">
+                <span>🎶 Celeste - Enjambre</span>
+                <audio controls>
+                    <source src="https://raw.githubusercontent.com/Emmanuel168HF/audio/main/cancion1.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="song">
+                <span>🎶 Camila - Fobia</span>
+                <audio controls>
+                    <source src="https://raw.githubusercontent.com/Emmanuel168HF/audio/main/cancion2.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <!-- 💚 Playlist Spotify -->
+        <div class="spotify-player">
+            <h3>💚 Playlist especial para tiii</h3>
+            <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/30PkDWrXNeVZOMNst3PTPu
+"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <button onclick="confetti()">🎊 Celebrar 🎊</button>
+    </div>
+
+    <script>
+        function confetti() {
+            for (let i = 0; i < 80; i++) {
+                let conf = document.createElement("div");
+                conf.classList.add("confetti");
+                conf.style.left = Math.random() * 100 + "vw";
+                conf.style.animationDuration = (Math.random() * 3 + 2) + "s";
+                document.body.appendChild(conf);
+                setTimeout(() => conf.remove(), 5000);
+            }
+        }
+    </script>
+
+</body>
+</html>
