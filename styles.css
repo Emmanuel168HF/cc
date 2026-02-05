@@ -1,4 +1,3 @@
-/* Reset básico para que todo inicie igual */
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +5,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Fondo animado con degradado */
+/* Fondo animado */
 body {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    padding: 20px;
     background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4ADEDE, #ff9a9e);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
@@ -25,61 +24,57 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Tarjeta con efecto vidrio */
+/* Tarjeta */
 .card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     border-radius: 25px;
     padding: 40px;
-    width: 90%;
+    width: 100%;
     max-width: 600px;
     text-align: center;
     color: white;
     box-shadow: 0 0 40px rgba(0,0,0,0.3);
     animation: float 6s ease-in-out infinite;
+    margin: 40px 0;
 }
 
-/* Efecto de flotación */
+/* Flotación suave */
 @keyframes float {
     0%,100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
 }
 
-/* Título grande */
 h1 {
     font-size: 2.5em;
     text-shadow: 0 0 20px rgba(255,255,255,0.8);
 }
 
-/* Subtítulo */
 h2 {
     margin: 15px 0;
     font-weight: 300;
 }
 
-/* Párrafo */
 p {
     margin: 20px 0;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-/* Sección música */
+/* Música */
 .music-player {
     margin-top: 20px;
 }
 
-/* Espacio entre canciones */
 .song {
     margin: 10px 0;
 }
 
-/* Barra de audio ocupa todo el ancho */
 audio {
     width: 100%;
     margin-top: 5px;
 }
 
-/* Botón decorativo */
+/* Botón */
 button {
     margin-top: 20px;
     padding: 12px 25px;
@@ -92,7 +87,6 @@ button {
     transition: 0.3s;
 }
 
-/* Efecto al pasar mouse */
 button:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px #fff;
@@ -108,9 +102,18 @@ button:hover {
     animation: fall linear forwards;
 }
 
-/* Animación de caída */
 @keyframes fall {
     to {
         transform: translateY(100vh) rotate(720deg);
     }
 }
+
+/* 📱 Modo celular */
+@media (max-width: 600px) {
+    .card { padding: 25px; }
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1em; }
+    p { font-size: 0.95em; }
+    button { width: 100%; }
+}
+
